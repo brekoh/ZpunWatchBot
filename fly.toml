@@ -1,0 +1,12 @@
+# -------- fly.toml -----------
+app = "telegram-bot-REPLACE"
+
+[build]
+dockerfile = "Dockerfile"
+
+[env]
+DB_PATH = "/data/bot.db"
+
+[mounts]
+  destination = "/data"
+  source      = "bot_data"
