@@ -1,0 +1,12 @@
+# -------- railway.toml ----------
+[build]
+dockerfile = "Dockerfile"
+
+[deploy]
+startCommand = "python -u telegram_moderator_bot.py"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+
+[plugins.volumes]
+mountPath = "/data"
+sizeGB    = 1
